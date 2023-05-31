@@ -1,28 +1,17 @@
-'''
-Caio Victor Bezerra de Medeiros Souto
-Jonildo Pereira Araújo Júnior
-João Matheus de Figueiredo Tavares
-Larissa Alcântara Sipião
-Saniel Martins Nóbrega
-
-
-BIBLIOTECA COLORAMA IMPORTADA, É SÓ BAIXAR
-'''
-
-
 from colorama import Fore, Style
 
 reclamacoes = []
 opcao = 0
 print(Fore.CYAN + "BEM VINDO A OUVIDORIA UNIFACISA" + Style.RESET_ALL)
-while opcao != 6:
+while opcao != 7:
     print(36 * "=")
     print("[1] " + Fore.GREEN + "Listar" + Style.RESET_ALL)
     print("[2] " + Fore.GREEN + "Adicionar" + Style.RESET_ALL)
     print("[3] " + Fore.GREEN + "Deletar" + Style.RESET_ALL)
     print("[4] " + Fore.GREEN + "Procurar" + Style.RESET_ALL)
     print("[5] " + Fore.GREEN + "Editar" + Style.RESET_ALL)
-    print("[6] " + Fore.RED + "Sair" + Style.RESET_ALL)
+    print("[6] " + Fore.YELLOW + "Deletar Todos" + Style.RESET_ALL)
+    print("[7] " + Fore.RED + "Sair" + Style.RESET_ALL)
     print(36 * "=")
     opcao = int(input("Escolha sua opção: "))
     if opcao == 1:
@@ -59,6 +48,10 @@ while opcao != 6:
         else:
             print("Posição inválida")
     elif opcao == 6:
+        reclamacoes.clear()
+        print("Todas as reclamações foram deletadas")
+    elif opcao == 7:
         print(Fore.RED + "Saindo, obrigado por usar nosso sistema de ouvidoria" + Style.RESET_ALL)
-    elif opcao != 6:
+    else:
         print("Opção inválida")
+
